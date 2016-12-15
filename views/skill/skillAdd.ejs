@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Add New Skill</title>
+</head>
+<body>
+<h1>Add New Skill</h1>
+<form action="/skill/insert" method="get">
+    Skill Name: <input id="name" name="name" type="text" />
+    <br />
+    <br />
+    <form action="/skill/insert" method="get">
+        Description: <input id="description" name="description" type="text" />
+        <br />
+        <br />
+        Skill ID
+        <select id="skill_id" name="skill_id">
+            <% for(var i=0; skill.length > i; i++ ) { %>
+            <option value="<%= skill[i].skill_id %>"><%= skill[i].skill_id %></option>
+            <% } %>
+        </select>
+
+        <input type="submit" />
+
+    </form>
+</body>
+
+</html>

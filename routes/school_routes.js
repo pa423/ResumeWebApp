@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var school_dal = require('../model/school_dal');
+var address_dal = require('../model/address_dal');
 
 
 // View All schools
@@ -23,16 +24,15 @@ router.get('/', function(req, res){
     }
     else {
         school_dal.getById(req.query.school_id, function(err,result) {
-           if (err) {
-               res.send(err);
-           }
-           else {
-               res.render('school/schoolViewById', {'result': result});
-           }
+            if (err) {
+                res.send(err);
+            }
+            else {
+                res.render('address/addressViewById', {'result': result});
+            }
         });
     }
 });
-
 
 // Return the add a new school form
 router.get('/add', function(req, res){

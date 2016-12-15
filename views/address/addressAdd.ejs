@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Add New Address</title>
+</head>
+<body>
+<h1>Add New Address</h1>
+<form action="/address/insert" method="get">
+    Street: <input id="street" name="street" type="text" />
+    <br />
+    <br />
+    <form action="/address/insert" method="get">
+        Zip Code: <input id="zip_code" name="zip_code" type="text" />
+        <br />
+        <br />
+        Address
+        <select id="address_id" name="address_id">
+            <% for(var i=0; address.length > i; i++ ) { %>
+            <option value="<%= address[i].address_id %>"><%= address[i].address_id %></option>
+            <% } %>
+        </select>
+
+        <input type="submit" />
+
+    </form>
+</body>
+
+</html>
