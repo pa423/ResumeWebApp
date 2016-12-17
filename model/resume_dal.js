@@ -25,6 +25,7 @@ exports.getById = function(resume_id, callback) {
     });
 };
 
+//insert new resume
 exports.insert = function(params, callback) {
     var query = 'INSERT INTO resume (resume_name, account_id) VALUES (?, ?)';
 
