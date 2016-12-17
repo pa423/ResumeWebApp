@@ -37,7 +37,7 @@ router.get('/', function(req, res){
     }
 });
 
-// Return the add a new skill form
+// Return then add a new skill form
 router.get('/add', function(req, res){
     // passing all the query parameters (req.query) to the insert function instead of each individually
     skill_dal.getAll(function(err,result) {

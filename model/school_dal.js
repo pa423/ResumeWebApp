@@ -34,6 +34,7 @@ exports.insert = function(params, callback) {
 
 }
 
+//delete school
 exports.delete = function(school_id, callback) {
     var query = 'DELETE FROM school WHERE school_id = ?';
     var queryData = [school_id];

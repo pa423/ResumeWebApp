@@ -38,6 +38,7 @@ exports.insert = function(params, callback) {
 
 }
 
+//delete company
 exports.delete = function(company_id, callback) {
     var query = 'DELETE FROM company WHERE company_id = ?';
     var queryData = [company_id];

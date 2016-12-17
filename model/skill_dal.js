@@ -38,6 +38,7 @@ exports.insert = function(params, callback) {
 
 }
 
+//delete skill
 exports.delete = function(skill_id, callback) {
     var query = 'DELETE FROM skill WHERE skill_id = ?';
     var queryData = [skill_id];

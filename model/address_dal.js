@@ -38,6 +38,7 @@ exports.insert = function(params, callback) {
 
 }
 
+//delete address
 exports.delete = function(address_id, callback) {
     var query = 'DELETE FROM address WHERE address_id = ?';
     var queryData = [address_id];
